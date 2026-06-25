@@ -1,19 +1,27 @@
-/* 
-  Author: Kaye Watts
-  Project: Multi-page code-along website
-*/
-
 /*
-  Color Palette:
-  Background: #f7f3ed
-  Header/Footer: #2f3e2f
-  Card: #ffffff
-  Text: #222222
-  Accent: #7a8f5a
-  Link: #355c7d
+  Author: Yarrow Watts
+  Project: Multi-page Portfolio
 */
 
-/* ===== Mobile-First Base Styles ===== */
+/* Global Styles */
+
+:root {
+  --sand: #d7c1a7;
+  --near-black: #061617;
+  --gold: #bd8748;
+  --clay: #98563f;
+  --muted-gold: #ac8d5b;
+  --olive: #81815f;
+  --deep-olive: #555d50;
+  --charcoal: #2b2c30;
+  --soft-white: #f4f2f1;
+  --black: #000000;
+  --acid-green: #caef35;
+  --cream: #f0ebd8;
+
+  --main-font: "Poppins", Arial, Helvetica, sans-serif;
+  --soft-shadow: rgba(6, 22, 23, 0.22);
+}
 
 * {
   box-sizing: border-box;
@@ -21,48 +29,80 @@
 
 body {
   margin: 0;
-  font-family: var(--body-font);
-  background-color: var(--olive);
+  font-family: var(--main-font);
+  background-color: var(--deep-olive);
   color: var(--cream);
   line-height: 1.6;
 }
 
-header {
-  background:
-    linear-gradient(rgba(47, 53, 38, 0.72), rgba(47, 53, 38, 0.72)),
-    url("images/topo-background.png");
-  background-size: cover;
-  background-position: center;
-  padding: 2.5rem 1.25rem;
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--acid-green);
+  overflow-wrap: break-word;
+}
+
+ul {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
   text-align: left;
 }
 
+li {
+  margin-bottom: 0.5rem;
+}
+
+/*  Header  */
+
+.site-header {
+  background:
+    linear-gradient(rgba(48, 53, 38, 0.86), rgba(48, 53, 38, 0.86)),
+    url("images/topo-background.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 185px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo {
-  width: 90px;
-  margin-bottom: 2rem;
+  width: 92px;
+  margin-bottom: 1rem;
 }
 
-header h1 {
-  max-width: 650px;
+.site-header h1 {
+  max-width: 720px;
   margin: 0;
-  font-family: var(--heading-font);
-  font-size: 2.35rem;
-  line-height: 1.1;
-  font-weight: 700;
+  color: var(--cream);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 
-header h1 span {
+.tagline-accent {
+  max-width: 720px;
+  margin: 0;
   color: var(--acid-green);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-align: center;
 }
 
-header p {
-  max-width: 650px;
-  font-size: 1.05rem;
-  margin-top: 1rem;
-}
+/* Navigation */
 
 nav {
-  background-color: var(--olive-dark);
+  background-color: var(--near-black);
+  border-top: 1px solid rgba(240, 235, 216, 0.12);
+  border-bottom: 1px solid rgba(240, 235, 216, 0.12);
 }
 
 nav ul {
@@ -71,13 +111,19 @@ nav ul {
   padding: 0;
 }
 
+nav li {
+  margin: 0;
+}
+
 nav a {
   display: block;
-  padding: 1rem;
+  padding: 1.15rem;
   color: var(--cream);
+  text-align: center;
   text-decoration: none;
+  font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
 }
 
 nav a:hover,
@@ -86,68 +132,302 @@ nav a[aria-current="page"] {
   background-color: rgba(255, 255, 255, 0.06);
 }
 
+/* Main Layout */
+
 main {
   width: 90%;
-  max-width: 1050px;
-  margin: 2.5rem auto;
+  max-width: 950px;
+  margin: 2rem auto 3rem;
 }
 
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.card {
-  background-color: rgba(240, 234, 215, 0.1);
-  border: 1px solid rgba(240, 234, 215, 0.25);
-  border-radius: 18px;
-  padding: 1.5rem;
-  box-shadow: 0 12px 30px var(--soft-shadow);
+/*  Text */
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--soft-white);
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-weight: 700;
+  text-align: center;
 }
 
-h2,
 h3 {
-  font-family: var(--heading-font);
-  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--acid-green);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 700;
+  text-align: center;
 }
 
-a {
-  color: var(--acid-green);
+p {
+  margin-top: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
 }
+
+.statement {
+  margin-bottom: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Icons  */
+
+.icon {
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 1rem;
+}
+
+/* Hero Card  */
+
+.hero-card {
+  max-width: 850px;
+  margin: 0 auto 2rem;
+  background-color: rgba(6, 22, 23, 0.28);
+  border: 1px solid rgba(202, 239, 53, 0.28);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 16px 32px var(--soft-shadow);
+}
+
+.hero-card p {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Identity Strip  */
+
+.identity-strip {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.identity-item {
+  background-color: rgba(6, 22, 23, 0.28);
+  border: 1px solid rgba(202, 239, 53, 0.28);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 16px 32px var(--soft-shadow);
+}
+
+.identity-item p {
+  margin-bottom: 0;
+}
+
+/* Cards */
+
+.card-grid,
+.resume-grid,
+.contact-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card,
+.project-card,
+.contact-card {
+  background-color: rgba(240, 235, 216, 0.08);
+  border: 1px solid rgba(240, 235, 216, 0.24);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 16px 32px var(--soft-shadow);
+}
+
+.card p,
+.project-card p,
+.contact-card p {
+  margin-bottom: 0;
+}
+
+.cream-card {
+  background-color: var(--cream);
+  color: var(--near-black);
+}
+
+.cream-card h3,
+.cream-card p {
+  color: var(--near-black);
+}
+
+/* Cream Band  */
+
+.cream-band {
+  background-color: var(--cream);
+  color: var(--near-black);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 16px 32px var(--soft-shadow);
+}
+
+.cream-band p,
+.cream-band li {
+  color: var(--near-black);
+}
+
+.cream-band a {
+  color: var(--near-black);
+  font-weight: 700;
+}
+
+.cream-band .icon {
+  margin-bottom: 0.75rem;
+}
+
+/* Project Page  */
+
+.project-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.project-card ul {
+  margin-bottom: 0;
+}
+
+/*  Resume Page */
+
+.resume-section {
+  width: 100%;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-label {
+  margin-bottom: 1rem;
+  color: var(--acid-green);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.dark-label {
+  color: var(--near-black);
+}
+
+.resume-item {
+  width: 100%;
+  background-color: rgba(6, 22, 23, 0.18);
+  border-left: 4px solid var(--acid-green);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 16px 32px var(--soft-shadow);
+}
+
+.resume-meta {
+  color: var(--cream);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.resume-item ul {
+  margin-bottom: 0;
+}
+
+.simple-list {
+  margin-bottom: 0;
+}
+
+/* Contact Page  */
+
+.contact-card {
+  text-align: center;
+}
+
+.contact-card p {
+  margin-bottom: 1rem;
+}
+
+.contact-card a {
+  font-weight: 700;
+}
+
+/* Footer */
 
 footer {
-  background-color: var(--olive-dark);
+  background-color: var(--near-black);
   color: var(--cream);
   text-align: center;
   padding: 1.25rem;
+  font-family: var(--main-font);
 }
 
-/* ===== Larger Screens ===== */
+footer p {
+  margin: 0;
+  font-family: var(--main-font);
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+/*  Larger Screens  */
 
 @media screen and (min-width: 700px) {
+  .site-header {
+    min-height: 175px;
+    padding: 2.25rem 5.5rem;
+  }
+
+  .logo {
+    width: 105px;
+    margin-bottom: 1rem;
+  }
+
+  .site-header h1,
+  .tagline-accent {
+    font-size: 1.45rem;
+  }
+
   nav ul {
     display: flex;
     justify-content: center;
   }
 
   nav a {
-    padding: 1rem 1.5rem;
-  }
-
-  header {
-    padding: 4rem 6rem;
-  }
-
-  header h1 {
-    font-size: 4rem;
+    padding: 1.25rem 2.25rem;
+    font-size: 1.08rem;
   }
 
   main {
-    width: 80%;
+    margin-top: 2.25rem;
   }
 
-  .card-grid {
-    display: grid;
+  .identity-strip {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+  }
+
+  .card-grid,
+  .resume-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cream-band {
+    padding: 2.5rem;
   }
 }
