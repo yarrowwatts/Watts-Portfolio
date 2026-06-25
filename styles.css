@@ -1,0 +1,153 @@
+/* 
+  Author: Kaye Watts
+  Project: Multi-page code-along website
+*/
+
+/*
+  Color Palette:
+  Background: #f7f3ed
+  Header/Footer: #2f3e2f
+  Card: #ffffff
+  Text: #222222
+  Accent: #7a8f5a
+  Link: #355c7d
+*/
+
+/* ===== Mobile-First Base Styles ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: var(--olive);
+  color: var(--cream);
+  line-height: 1.6;
+}
+
+header {
+  background:
+    linear-gradient(rgba(47, 53, 38, 0.72), rgba(47, 53, 38, 0.72)),
+    url("images/topo-background.png");
+  background-size: cover;
+  background-position: center;
+  padding: 2.5rem 1.25rem;
+  text-align: left;
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  max-width: 650px;
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 2.35rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+header h1 span {
+  color: var(--acid-green);
+}
+
+header p {
+  max-width: 650px;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+}
+
+nav {
+  background-color: var(--olive-dark);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 1rem;
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--acid-green);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+main {
+  width: 90%;
+  max-width: 1050px;
+  margin: 2.5rem auto;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: rgba(240, 234, 215, 0.1);
+  border: 1px solid rgba(240, 234, 215, 0.25);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px var(--soft-shadow);
+}
+
+h2,
+h3 {
+  font-family: var(--heading-font);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--acid-green);
+}
+
+footer {
+  background-color: var(--olive-dark);
+  color: var(--cream);
+  text-align: center;
+  padding: 1.25rem;
+}
+
+/* ===== Larger Screens ===== */
+
+@media screen and (min-width: 700px) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a {
+    padding: 1rem 1.5rem;
+  }
+
+  header {
+    padding: 4rem 6rem;
+  }
+
+  header h1 {
+    font-size: 4rem;
+  }
+
+  main {
+    width: 80%;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
