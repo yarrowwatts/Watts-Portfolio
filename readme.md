@@ -15,7 +15,6 @@ The website uses semantic HTML, mobile-first CSS styling, relative navigation li
 
 ## Design Notes
 The site includes:
-
 - A shared navigation menu on every page
 - Relative links between all pages
 - Mobile-first CSS
