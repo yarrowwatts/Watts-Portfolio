@@ -1,4 +1,4 @@
-/* ===== Global Styles ===== */
+/* Global Styles */
 
 :root {
   --sand: #d7c1a7;
@@ -52,7 +52,7 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* ===== Header ===== */
+/* Header */
 
 .site-header {
   min-height: 185px;
@@ -95,7 +95,7 @@ li {
   text-align: center;
 }
 
-/* ===== Navigation ===== */
+/* Navigation */
 
 nav {
   background-color: var(--near-black);
@@ -132,7 +132,7 @@ nav a[aria-current="page"] {
   background-color: rgba(255, 255, 255, 0.06);
 }
 
-/* ===== Main Layout ===== */
+/* Main Layout */
 
 main {
   width: 90%;
@@ -144,7 +144,7 @@ section {
   margin-bottom: 1.5rem;
 }
 
-/* ===== Typography ===== */
+/* Typography */
 
 h2 {
   margin-top: 0;
@@ -179,7 +179,7 @@ p {
   line-height: 1.7;
 }
 
-/* ===== Icons ===== */
+/* Icons */
 
 .icon {
   display: block;
@@ -188,7 +188,7 @@ p {
   margin: 0 auto 1rem;
 }
 
-/* ===== Hero Card ===== */
+/* Hero Card */
 
 .herocard {
   width: 100%;
@@ -214,7 +214,7 @@ p {
   margin-bottom: 0;
 }
 
-/* ===== Grid Sections ===== */
+/* Grid Sections */
 
 .identity-strip,
 .card-grid,
@@ -228,7 +228,7 @@ p {
   margin-bottom: 1.5rem;
 }
 
-/* ===== Cards ===== */
+/* Cards */
 
 .identity-item,
 .card,
@@ -259,7 +259,7 @@ p {
   color: var(--near-black);
 }
 
-/* ===== Cream Band ===== */
+/* Cream Band */
 
 .cream-band {
   width: 100%;
@@ -284,7 +284,7 @@ p {
   margin-bottom: 0.75rem;
 }
 
-/* ===== Project Page ===== */
+/* Project Page */
 
 .project-card {
   display: flex;
@@ -318,7 +318,7 @@ p {
   background-color: rgba(0, 0, 0, 0.12);
 }
 
-/* ===== Resume Page ===== */
+/* Resume Page */
 
 .resume-section {
   width: 100%;
@@ -366,7 +366,7 @@ p {
   margin-bottom: 0;
 }
 
-/* ===== Contact Page ===== */
+/* Contact Page */
 
 .contact-card {
   text-align: center;
@@ -385,7 +385,7 @@ p {
   width: 100%;
 }
 
-/* ===== Footer ===== */
+/* Footer */
 
 footer {
   background-color: var(--near-black);
@@ -403,7 +403,7 @@ footer p {
   text-align: center;
 }
 
-/* ===== Larger Screens ===== */
+/* Larger Screens */
 
 @media screen and (min-width: 700px) {
   .site-header {
