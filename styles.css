@@ -3,22 +3,6 @@
   Project: Multi-page Portfolio
 */
 
-/*
-  Color Palette:
-  Sand: #d7c1a7
-  Near Black: #061617
-  Gold: #bd8748
-  Clay: #98563f
-  Muted Gold: #ac8d5b
-  Olive: #81815f
-  Deep Olive: #555d50
-  Charcoal: #2b2c30
-  Soft White: #f4f2f1
-  Black: #000000
-  Acid Green: #caef35
-  Cream: #f0ebd8
-*/
-
 /* Global Styles */
 
 :root {
@@ -39,7 +23,7 @@
   --soft-shadow: rgba(6, 22, 23, 0.22);
 }
 
-* {
+{
   box-sizing: border-box;
 }
 
