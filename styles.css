@@ -298,6 +298,7 @@ p {
 .project-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
   margin-top: auto;
 }
@@ -306,7 +307,7 @@ p {
   display: inline-block;
   padding: 0.65rem 0.85rem;
   border: 1px solid rgba(202, 239, 53, 0.5);
-  border-radius: 999px;
+  border-radius: 10px;
   color: var(--acid-green);
   text-decoration: none;
   font-size: 0.9rem;
@@ -314,7 +315,7 @@ p {
 }
 
 .project-links a:hover {
-  background-color: rgba(202, 239, 53, 0.12);
+  background-color: rgba(0, 0, 0, 0.12);
 }
 
 /* ===== Resume Page ===== */
@@ -379,6 +380,11 @@ p {
   font-weight: 700;
 }
 
+.centered-card {
+  justify-self: center;
+  width: 100%;
+}
+
 /* ===== Footer ===== */
 
 footer {
@@ -440,6 +446,11 @@ footer p {
   .contact-grid,
   .project-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+    .centered-card {
+    grid-column: 1 / -1;
+    max-width: 500px;
   }
 
   .herocard,
