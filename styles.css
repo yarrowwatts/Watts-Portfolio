@@ -3,6 +3,22 @@
   Project: Multi-page Portfolio
 */
 
+/*
+  Color Palette:
+  Sand: #d7c1a7
+  Near Black: #061617
+  Gold: #bd8748
+  Clay: #98563f
+  Muted Gold: #ac8d5b
+  Olive: #81815f
+  Deep Olive: #555d50
+  Charcoal: #2b2c30
+  Soft White: #f4f2f1
+  Black: #000000
+  Acid Green: #caef35
+  Cream: #f0ebd8
+*/
+
 /* Global Styles */
 
 :root {
@@ -33,6 +49,9 @@ body {
   background-color: var(--deep-olive);
   color: var(--cream);
   line-height: 1.6;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
 }
 
 img {
@@ -54,7 +73,7 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/*  Header  */
+/* Header */
 
 .site-header {
   background:
@@ -106,6 +125,8 @@ nav {
 }
 
 nav ul {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -144,7 +165,7 @@ section {
   margin-bottom: 1.5rem;
 }
 
-/*  Text */
+/* Text */
 
 h2 {
   margin-top: 0;
@@ -179,7 +200,7 @@ p {
   line-height: 1.7;
 }
 
-/* Icons  */
+/* Icons */
 
 .icon {
   display: block;
@@ -188,7 +209,7 @@ p {
   margin: 0 auto 1rem;
 }
 
-/* Hero Card  */
+/* Hero Card */
 
 .hero-card {
   max-width: 850px;
@@ -210,7 +231,7 @@ p {
   margin-bottom: 0;
 }
 
-/* Identity Strip  */
+/* Identity Strip */
 
 .identity-strip {
   display: grid;
@@ -262,11 +283,12 @@ p {
 }
 
 .cream-card h3,
-.cream-card p {
+.cream-card p,
+.cream-card li {
   color: var(--near-black);
 }
 
-/* Cream Band  */
+/* Cream Band */
 
 .cream-band {
   background-color: var(--cream);
@@ -290,18 +312,55 @@ p {
   margin-bottom: 0.75rem;
 }
 
-/* Project Page  */
+/* Project Page */
 
 .project-list {
   display: grid;
   gap: 1.25rem;
 }
 
-.project-card ul {
-  margin-bottom: 0;
+.project-card {
+  display: flex;
+  flex-direction: column;
 }
 
-/*  Resume Page */
+.project-card ul {
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid rgba(202, 239, 53, 0.5);
+  border-radius: 999px;
+  color: var(--acid-green);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.project-links a:hover {
+  background-color: rgba(202, 239, 53, 0.12);
+}
+
+.project-status {
+  margin-top: auto;
+  margin-bottom: 0;
+  color: var(--soft-white);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Resume Page */
 
 .resume-section {
   width: 100%;
@@ -332,6 +391,10 @@ p {
   box-shadow: 0 16px 32px var(--soft-shadow);
 }
 
+.resume-item h3 {
+  text-align: left;
+}
+
 .resume-meta {
   color: var(--cream);
   font-weight: 600;
@@ -346,7 +409,7 @@ p {
   margin-bottom: 0;
 }
 
-/* Contact Page  */
+/* Contact Page */
 
 .contact-card {
   text-align: center;
@@ -378,7 +441,7 @@ footer p {
   text-align: center;
 }
 
-/*  Larger Screens  */
+/* Larger Screens */
 
 @media screen and (min-width: 700px) {
   .site-header {
@@ -397,7 +460,7 @@ footer p {
   }
 
   nav ul {
-    display: flex;
+    flex-direction: row;
     justify-content: center;
   }
 
